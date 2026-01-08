@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Sahil Patel Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/MainImage.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNavbar">
+        <div class="navbar-container">
+            <!-- Expanded Navbar Content -->
+            <div class="navbar-expanded">
+                <!-- Profile Picture -->
+                <div class="navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="navbar-avatar" />
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-contact" href="index.html#lets-work-together">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Collapsed Navbar Content (Available for Work) -->
+            <div class="navbar-collapsed">
+                <!-- Profile Picture -->
+                <div class="navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="navbar-avatar" />
+                </div>
+                
+                <!-- Available for Work Indicator -->
+                <div class="navbar-available">
+                    <span class="available-text">Available for work</span>
+                    <div class="available-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Bar (visible only on mobile) -->
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-wrapper">
+            <div class="mobile-navbar-container">
+                <!-- Profile Picture -->
+                <div class="mobile-navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-navbar-avatar" />
+                </div>
+                
+                <!-- Available for Work Indicator -->
+                <div class="mobile-navbar-available">
+                    <span class="mobile-available-text">Available for work</span>
+                    <div class="mobile-available-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Content (expands downward) -->
+            <div class="mobile-menu-content" id="mobileMenuContent">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-profile">
+                        <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-menu-avatar" />
+                    </div>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+                
+                <nav class="mobile-menu-nav">
+                    <ul class="mobile-menu-list">
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="index.html">Home</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="index.html#about-section">About</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="resume.html">Resume</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <a class="mobile-menu-contact-btn" href="index.html#lets-work-together">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay (backdrop) -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section - Portavia Style -->
+        <section class="hero-section-portavia reveal-on-scroll">
+            <div class="container-fluid">
+                <div class="row align-items-center min-vh-100">
+                    <!-- Left Text Block -->
+                    <div class="col-lg-4 col-md-5 col-12 hero-left-text">
+                        <div class="hero-name-small">SAHIL PATEL</div>
+                        <div class="hero-title-large-left">SOFTWARE</div>
+                    </div>
+                    
+                    <!-- Center Portrait -->
+                    <div class="col-lg-4 col-md-6 col-12 hero-portrait-center">
+                        <div class="portrait-wrapper">
+                            <img src="assets/images/MainImage.png" alt="Sahil Patel" class="hero-portrait-image" />
+                            <!-- Circular Hi Button with Hand Animation -->
+                            <div class="hero-interactive-button">
+                                <div class="hi-circle">Hi</div>
+                                <div class="hand-icon">👋🏼</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Text Block -->
+                    <div class="col-lg-4 col-md-5 col-12 hero-right-text">
+                        <div class="hero-title-large-right">
+                            <span class="title-line">DEVELOPER</span>
+                        </div>
+                        <p class="hero-description">
+                            I'm a Software Developer based in Canada, passionate about building interactive applications and optimizing performance using modern technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Can Do For You Section -->
+        <section class="section services-section reveal-on-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="section-title-large">Core Skills</h2>
+                        <p class="section-intro">
+                            Detail oriented Computer Programming & Analysis student with hands on experience in C#, UWP, and ASP.NET MVC. Skilled in object-oriented design, event-driven programming, and database management.
+                        </p>
+                        
+                        <div class="row g-4 mt-5">
+                            <!-- Service 1 -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="service-card reveal-on-scroll">
+                                    <div class="service-number">1.</div>
+                                    <h3 class="service-title">Web Development</h3>
+                                    <ul class="service-list">
+                                        <li>ASP.NET MVC application development</li>
+                                        <li>Full-stack web application development</li>
+                                        <li>RESTful API design and implementation</li>
+                                        <li>Entity Framework and database management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 2 -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="service-card reveal-on-scroll">
+                                    <div class="service-number">2.</div>
+                                    <h3 class="service-title">Desktop Application Development</h3>
+                                    <ul class="service-list">
+                                        <li>UWP (Universal Windows Platform) development</li>
+                                        <li>2D game development with physics engines</li>
+                                        <li>Object-oriented design and architecture</li>
+                                        <li>Event-driven programming and state management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 3 -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="service-card reveal-on-scroll">
+                                    <div class="service-number">3.</div>
+                                    <h3 class="service-title">Database Management</h3>
+                                    <ul class="service-list">
+                                        <li>SQL Server, MySQL, SQLite database design</li>
+                                        <li>MongoDB NoSQL database management</li>
+                                        <li>Data warehouse design and optimization</li>
+                                        <li>Entity Framework integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 4 -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="service-card reveal-on-scroll">
+                                    <div class="service-number">4.</div>
+                                    <h3 class="service-title">Full-Stack Solutions</h3>
+                                    <ul class="service-list">
+                                        <li>End-to-end application development</li>
+                                        <li>Front-end with HTML, CSS, JavaScript, Bootstrap</li>
+                                        <li>Back-end with C#, ASP.NET, WebApi</li>
+                                        <li>Performance optimization and testing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section with Stats -->
+        <section id="about-section" class="section about-section reveal-on-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="section-title-large">about me</h2>
+                        <p class="about-intro">
+                            Hi! I'm Sahil, a Software Developer and Computer Programming & Analysis student at Niagara College, passionate about building interactive applications and optimizing performance.
+                        </p>
+
+                        <!-- Contact Info -->
+                        <div class="about-contact">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contact-info-item">
+                                        <span class="contact-label">Email :</span>
+                                        <a href="mailto:sahil02.jp@gmail.com" class="contact-value">sahil02.jp@gmail.com</a>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <span class="contact-label">Location :</span>
+                                        <span class="contact-value">Niagara Falls, ON</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="contact-info-item">
+                                        <span class="contact-label">LinkedIn :</span>
+                                        <a href="https://linkedin.com/in/sahilpatel02" class="contact-value" target="_blank" rel="noopener noreferrer">
+                                            sahilpatel02
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-left:6px;" aria-hidden="true" focusable="false" role="img">
+                                                <title>LinkedIn</title>
+                                                <path d="M20.452 20.452h-3.554v-5.568c0-1.328-.026-3.037-1.851-3.037-1.853 0-2.137 1.447-2.137 2.944v5.661H9.356V9h3.412v1.561h.049c.476-.9 1.637-1.851 3.369-1.851 3.602 0 4.268 2.37 4.268 5.456v6.286zM5.337 7.433a2.062 2.062 0 1 1 .001-4.124 2.062 2.062 0 0 1-.001 4.124zM6.934 20.452H3.74V9h3.194v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.273V1.727C24 .774 23.2 0 22.225 0z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <span class="contact-label">GitHub :</span>
+                                        <a href="https://github.com/SahilPatel-02" class="contact-value" target="_blank" rel="noopener noreferrer">
+                                            SahilPatel-02
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-left:6px;" aria-hidden="true" focusable="false" role="img">
+                                                <title>GitHub</title>
+                                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.091-.746.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.809 1.305 3.495.998.108-.776.42-1.305.763-1.604-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.243 2.874.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.624-5.479 5.92.43.371.814 1.102.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .321.216.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- My Story -->
+                        <div class="my-story reveal-on-scroll">
+                            <h3 class="story-title">My Story</h3>
+                            <div class="story-content">
+                                <p>
+                                    I'm currently pursuing an Advanced Diploma in Computer Programming & Analysis at Niagara College (2023-2026), 
+                                    focusing on software development, system analysis, and database management using industry best practices.
+                                </p>
+                                <p>
+                                    My expertise spans multiple programming languages including C, C++, C#, Python, JavaScript, and R. 
+                                    I specialize in ASP.NET MVC development, creating full-stack web applications with Entity Framework, 
+                                    and building interactive UWP applications. I'm passionate about object-oriented design, event-driven 
+                                    programming, and database optimization.
+                                </p>
+                                <p>
+                                    I've worked on several projects including a Gym Management System, a Choir & Volunteer Management 
+                                    System for Tomorrows Voices, and a 2D game with physics engine. Currently, I'm also working as a 
+                                    Store Associate at Dollarama, which has helped me develop strong communication and customer service skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section projects-preview reveal-on-scroll" id="projectsStack">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="section-title-large">featured projects</h2>
+                        <p class="section-intro">
+                            These selected projects showcase my skills in web development, desktop applications, and data visualization. Each project demonstrates my ability to solve real world problems using modern technologies and best practices.
+                        </p>
+                        
+                        <div class="projects-stack-container mt-4">
+                            <!-- Project 1 - 2D Game (UWP) -->
+                            <div class="project-stack-card" data-project="1">
+                                <div class="project-stack-content">
+                                    <div class="project-stack-image">
+                                        <img src="assets/images/UWPGameMainPage.png" alt="Hauntwood Hop - UWP 2D Game" />
+                                    </div>
+                                    <div class="project-stack-info">
+                                        <span class="project-stack-category">Desktop Application</span>
+                                        <h2 class="project-stack-title">Hauntwood Hop - 2D Game (UWP)</h2>
+                                        <p class="project-stack-description">
+                                            Developed an interactive Halloween-themed 2D game with physics engine, collision detection, and dynamic difficulty progression.
+                                        </p>
+                                        <div class="project-stack-tech">
+                                            <span>C#</span>
+                                            <span>UWP</span>
+                                            <span>XAML</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 - Power BI Dashboard -->
+                            <div class="project-stack-card" data-project="2">
+                                <div class="project-stack-content">
+                                    <div class="project-stack-image">
+                                        <img src="assets/images/PowerBI.png" alt="Power BI Business Intelligence Dashboard" />
+                                    </div>
+                                    <div class="project-stack-info">
+                                        <span class="project-stack-category">Data Visualization</span>
+                                        <h2 class="project-stack-title">Business Intelligence Dashboard</h2>
+                                        <p class="project-stack-description">
+                                            Created a comprehensive Power BI dashboard for Conteso Retailers with interactive data visualizations and real-time KPI tracking.
+                                        </p>
+                                        <div class="project-stack-tech">
+                                            <span>Power BI</span>
+                                            <span>Data Analysis</span>
+                                            <span>Dashboard Design</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 3 - Choir & Volunteer Management System -->
+                            <div class="project-stack-card" data-project="3">
+                                <div class="project-stack-content">
+                                    <div class="project-stack-image">
+                                        <img src="assets/images/TVLoginPage.png" alt="Tomorrows Voices Management System" />
+                                    </div>
+                                    <div class="project-stack-info">
+                                        <span class="project-stack-category">Web Development</span>
+                                        <h2 class="project-stack-title">Choir & Volunteer Management System</h2>
+                                        <p class="project-stack-description">
+                                            Developed a .NET MVC web application for managing Singers, Choirs, and Volunteers with role-based authentication and comprehensive user management.
+                                        </p>
+                                        <div class="project-stack-tech">
+                                            <span>ASP.NET Core</span>
+                                            <span>MVC</span>
+                                            <span>Entity Framework</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Detail Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="project-modal-overlay"></div>
+            <div class="project-modal-content">
+                <button class="project-modal-close" id="closeModal">&times;</button>
+                <div class="project-modal-body" id="modalBody">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery Modal -->
+        <div class="image-gallery-modal" id="imageGalleryModal">
+            <button class="image-gallery-close" id="closeGallery">&times;</button>
+            <button class="image-gallery-nav prev" id="prevImage">‹</button>
+            <button class="image-gallery-nav next" id="nextImage">›</button>
+            <div class="image-gallery-container" id="galleryContainer">
+                <img id="galleryImage" src="" alt="Gallery Image" />
+            </div>
+            <div class="image-gallery-counter" id="galleryCounter"></div>
+        </div>
+
+        <!-- Let's Work Together Section -->
+        <section id="lets-work-together" class="section cta-section reveal-on-scroll">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Column - Image with Hand Animation -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="cta-image-wrapper">
+                            <div class="portrait-wrapper">
+                                <img src="assets/images/MainImage.png" alt="Sahil Patel" class="cta-image" />
+                                <!-- Circular Hi Button with Hand Animation -->
+                                <div class="hero-interactive-button">
+                                    <div class="hi-circle">Hi</div>
+                                    <div class="hand-icon">👋🏼</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Form -->
+                    <div class="col-lg-7 col-md-6">
+                        <h2 class="section-title-large">LET'S WORK TOGETHER</h2>
+                        <p class="section-intro">
+                            Let's build something impactful together whether it's your brand, your website, or your next big idea.
+                        </p>
+                        <div class="cta-form-wrapper mt-4">
+                            <form id="contactForm" class="contact-form">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control cta-form-input" id="cta-name" name="name" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control cta-form-input" id="cta-email" name="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-control cta-form-input" id="cta-service" name="service" required>
+                                        <option value="">Service Needed?</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="desktop-app">Desktop Application</option>
+                                        <option value="database">Database Management</option>
+                                        <option value="full-stack">Full-Stack Solution</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control cta-form-input" id="cta-message" name="message" rows="4" placeholder="What Can I Help You..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">SUBMIT</button>
+                            </form>
+                            <div id="cta-form-message" class="form-message mt-3" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Top Section: Three Columns -->
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-md-0">
+                        <div class="footer-column">
+                            <span class="footer-label">Email :</span>
+                            <a href="mailto:sahil02.jp@gmail.com" class="footer-link">sahil02.jp@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="footer-column">
+                            <span class="footer-label">Social :</span>
+                            <div class="social-links-icons">
+                                <a href="https://github.com/SahilPatel-02" class="social-icon-link" target="_blank" aria-label="GitHub" title="GitHub">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    <span class="social-name">GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/sahilpatel02" class="social-icon-link" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                    <span class="social-name">LinkedIn</span>
+                                </a>
+                                <a href="mailto:sahil02.jp@gmail.com" class="social-icon-link" target="_blank" aria-label="Email" title="Email">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                    </svg>
+                                    <span class="social-name">Email</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Section: Copyright -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-copyright">&copy; Copyright <span id="currentYear"></span>. All Rights Reserved by Sahil Patel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle Switch -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <div class="dark-mode-toggle-switch">
+            <div class="dark-mode-toggle-handle">
+                <span class="dark-mode-toggle-icon sun-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </span>
+                <span class="dark-mode-toggle-icon moon-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </button>
+
+    <!-- Scripts -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+

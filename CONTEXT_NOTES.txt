@@ -1,0 +1,308 @@
+================================================================================
+                    PORTFOLIO WEBSITE - CONTEXT NOTES
+                    For Continuing Development
+================================================================================
+
+PROJECT OVERVIEW:
+----------------
+Personal portfolio website for Sahil Patel - Software Developer
+Originally built in ASP.NET Core MVC (Visual Studio)
+Successfully migrated to static HTML/CSS/JS (Visual Studio Code)
+
+CURRENT STATE:
+--------------
+✓ Fully functional static website
+✓ All pages working (Home, Projects, Resume, Contact)
+✓ All features working (Dark mode, Modals, Animations, Mobile menu)
+✓ Ready for deployment to IONOS hosting
+✓ Domain: sahilpatel02.dev (already purchased)
+
+================================================================================
+                            MIGRATION COMPLETED
+================================================================================
+
+WHAT WAS DONE:
+--------------
+1. Converted ASP.NET Core MVC Razor views to static HTML files
+2. Removed all Razor syntax (@ViewData, @RenderBody, asp-controller, etc.)
+3. Updated all paths from ~/ to relative paths
+4. Copied all assets (images, CSS, JS, libraries, resume PDF)
+5. Updated JavaScript image paths in project modal data
+6. Fixed footer copyright to use JavaScript instead of Razor
+
+FILES CREATED:
+--------------
+- index.html (Home page with hero, skills, about, projects preview, contact form)
+- projects.html (Full projects showcase page)
+- resume.html (Resume page with download link)
+- contact.html (Contact page with form)
+- css/site.css (Complete stylesheet - 3000+ lines)
+- js/site.js (All interactive features - 798 lines)
+- assets/images/ (13 portfolio images)
+- lib/bootstrap/ (Bootstrap 5 framework)
+- lib/jquery/ (jQuery library)
+- resume/SahilPatel_Resume.pdf
+
+KEY CHANGES MADE:
+-----------------
+- Razor syntax removed: @ViewData["Title"] → Hardcoded titles
+- Navigation: asp-controller → Regular <a href> links
+- Image paths: ~/Assets/Images/ → assets/images/
+- CSS/JS paths: ~/css/ → css/, ~/js/ → js/
+- Footer year: @DateTime.Now.Year → JavaScript getFullYear()
+- Project modal images: /Assets/Images/ → assets/images/
+
+================================================================================
+                         CURRENT FILE STRUCTURE
+================================================================================
+
+D:\VSC Portfolio Website\
+├── index.html                    (Main home page)
+├── projects.html                 (Projects showcase)
+├── resume.html                   (Resume page)
+├── contact.html                  (Contact page)
+├── MIGRATION_NOTES.txt           (Migration documentation)
+├── CONTEXT_NOTES.txt             (This file)
+├── css/
+│   └── site.css                  (All website styles)
+├── js/
+│   └── site.js                   (Interactive features, modals, animations)
+├── assets/
+│   └── images/                   (13 portfolio images)
+│       ├── MainImage.png
+│       ├── PowerBI.png
+│       ├── TVLoginPage.png
+│       ├── UWPGameMainPage.png
+│       └── [9 more images]
+├── lib/
+│   ├── bootstrap/                (Bootstrap 5 - complete)
+│   └── jquery/                   (jQuery library)
+└── resume/
+    └── SahilPatel_Resume.pdf
+
+================================================================================
+                         TECHNOLOGIES & FEATURES
+================================================================================
+
+TECH STACK:
+-----------
+- HTML5 (Static pages)
+- CSS3 (Custom design system with CSS variables)
+- JavaScript (Vanilla JS - no frameworks)
+- Bootstrap 5 (Grid system and utilities only)
+- jQuery (DOM manipulation)
+
+WORKING FEATURES:
+-----------------
+✓ Responsive design (Mobile, Tablet, Desktop)
+✓ Dark mode toggle (saves preference in localStorage)
+✓ Smooth scroll animations (IntersectionObserver)
+✓ Project modals with image galleries
+✓ Mobile hamburger menu
+✓ Dynamic navbar (collapses on scroll)
+✓ Scroll reveal animations
+✓ Contact form (Frontend validation only)
+✓ Resume PDF download
+
+KNOWN ISSUES / NOTES:
+---------------------
+- Contact form shows success message but doesn't send emails (needs backend API)
+- Console shows source map warnings (harmless, can be ignored)
+- "dust-var-locale" error in console (from browser extension, not our code)
+
+================================================================================
+                         PROJECT DETAILS
+================================================================================
+
+DEVELOPER INFO:
+---------------
+Name: Sahil Patel
+Email: sahil02.jp@gmail.com
+Location: Niagara Falls, ON, Canada
+GitHub: https://github.com/SahilPatel-02
+LinkedIn: https://linkedin.com/in/sahilpatel02
+Domain: sahilpatel02.dev
+
+PROJECTS DISPLAYED:
+-------------------
+1. Hauntwood Hop - 2D Game (UWP) - Desktop Application
+2. Business Intelligence Dashboard - Power BI Data Visualization
+3. Choir & Volunteer Management System - ASP.NET Core MVC Web App
+
+TECHNICAL SKILLS SHOWCASED:
+---------------------------
+- C, C++, C#, Python, JavaScript, R
+- ASP.NET MVC, Entity Framework
+- UWP, XAML
+- SQL Server, MySQL, SQLite, MongoDB
+- HTML, CSS, Bootstrap, jQuery
+- Power BI, Data Visualization
+
+================================================================================
+                         DEPLOYMENT INFO
+================================================================================
+
+HOSTING: IONOS (Static hosting - already purchased)
+DOMAIN: sahilpatel02.dev (already purchased)
+STATUS: Ready for deployment
+
+DEPLOYMENT REQUIREMENTS:
+------------------------
+- Upload all files to IONOS hosting root (public_html/ or www/)
+- Maintain exact folder structure
+- All paths are relative (no server-side processing needed)
+- index.html must be in root directory
+
+================================================================================
+                         FUTURE IMPROVEMENTS
+================================================================================
+
+PENDING TASKS:
+--------------
+1. Contact Form Backend:
+   - Create ASP.NET Core Web API
+   - Deploy to Render.com (free tier)
+   - Update JavaScript to call API endpoint
+   - Add CORS configuration
+
+2. Optional Enhancements:
+   - Add analytics (Google Analytics)
+   - Optimize images (compress if needed)
+   - Add README.md for GitHub
+   - Add .gitignore file
+
+================================================================================
+                         CODE STRUCTURE NOTES
+================================================================================
+
+JAVASCRIPT (site.js):
+---------------------
+- Lines 1-28: Initialization and setup
+- Lines 32-74: Scroll reveal animations
+- Lines 79-145: Smooth scrolling for anchor links
+- Lines 150-185: Navbar scroll effects
+- Lines 289-370: Dark mode toggle functionality
+- Lines 375-573: Project cards and modal system
+- Lines 578-690: Image gallery functionality
+- Lines 695-797: Mobile menu functionality
+
+CSS (site.css):
+---------------
+- Lines 1-70: CSS variables and design system
+- Lines 114-440: Navigation styles
+- Lines 485-678: Hero section styles
+- Lines 720-1100: Section and component styles
+- Lines 1812-2133: Mobile navigation styles
+- Lines 2429-2904: Project modal and gallery styles
+- Lines 2906-3095: Dark mode toggle styles
+
+HTML STRUCTURE:
+---------------
+All pages follow same structure:
+- Navigation (desktop + mobile)
+- Main content (page-specific)
+- Footer (same on all pages)
+- Dark mode toggle
+- Scripts (jQuery, Bootstrap, site.js)
+
+================================================================================
+                         IMPORTANT PATHS
+================================================================================
+
+IMAGES:
+-------
+All images: assets/images/[filename]
+Main profile: assets/images/MainImage.png
+Project images: assets/images/[ProjectName].png
+
+STYLES:
+-------
+Main CSS: css/site.css
+Bootstrap: lib/bootstrap/dist/css/bootstrap.min.css
+
+SCRIPTS:
+--------
+Main JS: js/site.js
+jQuery: lib/jquery/dist/jquery.min.js
+Bootstrap: lib/bootstrap/dist/js/bootstrap.bundle.min.js
+
+RESUME:
+-------
+PDF: resume/SahilPatel_Resume.pdf
+
+================================================================================
+                         TESTING STATUS
+================================================================================
+
+TESTED & WORKING:
+-----------------
+✓ All pages load correctly
+✓ Navigation between pages works
+✓ All images display properly
+✓ Dark mode toggle functions
+✓ Mobile menu works
+✓ Project modals open and display correctly
+✓ Image galleries work
+✓ Contact form validation works
+✓ Scroll animations work
+✓ Smooth scrolling works
+
+CONSOLE WARNINGS (Harmless):
+-----------------------------
+- Source map warnings (development only, safe to ignore)
+- "dust-var-locale" error (browser extension, not our code)
+
+================================================================================
+                         WORKING DIRECTORY
+================================================================================
+
+Current working directory: D:\VSC Portfolio Website
+
+All file operations should be relative to this directory.
+All paths in HTML/CSS/JS are relative to root.
+
+================================================================================
+                         QUICK REFERENCE
+================================================================================
+
+TO ADD NEW PROJECT:
+-------------------
+1. Add image to assets/images/
+2. Update projectData object in js/site.js (around line 380)
+3. Add project card HTML in index.html and projects.html
+
+TO UPDATE CONTACT INFO:
+-----------------------
+- Update footer in all HTML files
+- Update about section in index.html
+- Update contact.html page
+
+TO CHANGE STYLES:
+-----------------
+- Edit css/site.css
+- CSS variables defined at top (lines 7-56)
+- Dark mode styles use [data-theme="dark"] selector
+
+TO UPDATE NAVIGATION:
+---------------------
+- Update navbar in all HTML files (index, projects, resume, contact)
+- Update mobile menu in all HTML files
+
+================================================================================
+                         NEXT STEPS READY
+================================================================================
+
+The website is fully functional and ready for:
+1. Deployment to IONOS
+2. Adding contact form backend API
+3. Any additional features or improvements
+
+All core functionality is complete and tested.
+
+================================================================================
+                         END OF CONTEXT
+================================================================================
+
+Last Updated: January 2025
+Project Status: Complete and Ready for Deployment
+

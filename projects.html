@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Sahil Patel Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/MainImage.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNavbar">
+        <div class="navbar-container">
+            <!-- Expanded Navbar Content -->
+            <div class="navbar-expanded">
+                <!-- Profile Picture -->
+                <div class="navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="navbar-avatar" />
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-contact" href="index.html#lets-work-together">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Collapsed Navbar Content (Available for Work) -->
+            <div class="navbar-collapsed">
+                <!-- Profile Picture -->
+                <div class="navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="navbar-avatar" />
+                </div>
+                
+                <!-- Available for Work Indicator -->
+                <div class="navbar-available">
+                    <span class="available-text">Available for work</span>
+                    <div class="available-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Bar (visible only on mobile) -->
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-wrapper">
+            <div class="mobile-navbar-container">
+                <!-- Profile Picture -->
+                <div class="mobile-navbar-profile">
+                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-navbar-avatar" />
+                </div>
+                
+                <!-- Available for Work Indicator -->
+                <div class="mobile-navbar-available">
+                    <span class="mobile-available-text">Available for work</span>
+                    <div class="mobile-available-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Content (expands downward) -->
+            <div class="mobile-menu-content" id="mobileMenuContent">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-profile">
+                        <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-menu-avatar" />
+                    </div>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+                
+                <nav class="mobile-menu-nav">
+                    <ul class="mobile-menu-list">
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="index.html">Home</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="index.html#about-section">About</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu-link" href="resume.html">Resume</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <a class="mobile-menu-contact-btn" href="index.html#lets-work-together">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay (backdrop) -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Projects Header -->
+        <section class="section-header reveal-on-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="page-title">FEATURED PROJECTS</h1>
+                        <p class="page-subtitle">
+                            These selected projects showcase my skills in web development, desktop applications, and data visualization. Each project demonstrates my ability to solve real-world problems using modern technologies and best practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stacked Projects Scroll Section -->
+        <section class="projects-stack-section" id="projectsStack">
+            <div class="container">
+                <div class="projects-stack-container">
+                    <!-- Project 1 - 2D Game (UWP) -->
+                    <div class="project-stack-card" data-project="1">
+                        <div class="project-stack-content">
+                            <div class="project-stack-image">
+                                <img src="assets/images/UWPGameMainPage.png" alt="Hauntwood Hop - UWP 2D Game" />
+                            </div>
+                            <div class="project-stack-info">
+                                <span class="project-stack-category">Desktop Application</span>
+                                <h2 class="project-stack-title">Hauntwood Hop - 2D Game (UWP)</h2>
+                                <p class="project-stack-description">
+                                    Developed an interactive Halloween-themed 2D game with physics engine, collision detection, and dynamic difficulty progression.
+                                </p>
+                                <div class="project-stack-tech">
+                                    <span>C#</span>
+                                    <span>UWP</span>
+                                    <span>XAML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Power BI Dashboard -->
+                    <div class="project-stack-card" data-project="2">
+                        <div class="project-stack-content">
+                            <div class="project-stack-image">
+                                <img src="assets/images/PowerBI.png" alt="Power BI Business Intelligence Dashboard" />
+                            </div>
+                            <div class="project-stack-info">
+                                <span class="project-stack-category">Data Visualization</span>
+                                <h2 class="project-stack-title">Business Intelligence Dashboard</h2>
+                                <p class="project-stack-description">
+                                    Created a comprehensive Power BI dashboard for Conteso Retailers with interactive data visualizations and real-time KPI tracking.
+                                </p>
+                                <div class="project-stack-tech">
+                                    <span>Power BI</span>
+                                    <span>Data Analysis</span>
+                                    <span>Dashboard Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 - Choir & Volunteer Management System -->
+                    <div class="project-stack-card" data-project="3">
+                        <div class="project-stack-content">
+                            <div class="project-stack-image">
+                                <img src="assets/images/TVLoginPage.png" alt="Tomorrows Voices Management System" />
+                            </div>
+                            <div class="project-stack-info">
+                                <span class="project-stack-category">Web Development</span>
+                                <h2 class="project-stack-title">Choir & Volunteer Management System</h2>
+                                <p class="project-stack-description">
+                                    Developed a .NET MVC web application for managing Singers, Choirs, and Volunteers with role-based authentication and comprehensive user management.
+                                </p>
+                                <div class="project-stack-tech">
+                                    <span>ASP.NET Core</span>
+                                    <span>MVC</span>
+                                    <span>Entity Framework</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Detail Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="project-modal-overlay"></div>
+            <div class="project-modal-content">
+                <button class="project-modal-close" id="closeModal">&times;</button>
+                <div class="project-modal-body" id="modalBody">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery Modal -->
+        <div class="image-gallery-modal" id="imageGalleryModal">
+            <button class="image-gallery-close" id="closeGallery">&times;</button>
+            <button class="image-gallery-nav prev" id="prevImage">‹</button>
+            <button class="image-gallery-nav next" id="nextImage">›</button>
+            <div class="image-gallery-container" id="galleryContainer">
+                <img id="galleryImage" src="" alt="Gallery Image" />
+            </div>
+            <div class="image-gallery-counter" id="galleryCounter"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Top Section: Three Columns -->
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-md-0">
+                        <div class="footer-column">
+                            <span class="footer-label">Email :</span>
+                            <a href="mailto:sahil02.jp@gmail.com" class="footer-link">sahil02.jp@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="footer-column">
+                            <span class="footer-label">Social :</span>
+                            <div class="social-links-icons">
+                                <a href="https://github.com/SahilPatel-02" class="social-icon-link" target="_blank" aria-label="GitHub" title="GitHub">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    <span class="social-name">GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/sahilpatel02" class="social-icon-link" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                    <span class="social-name">LinkedIn</span>
+                                </a>
+                                <a href="mailto:sahil02.jp@gmail.com" class="social-icon-link" target="_blank" aria-label="Email" title="Email">
+                                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                    </svg>
+                                    <span class="social-name">Email</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Section: Copyright -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-copyright">&copy; Copyright <span id="currentYear"></span>. All Rights Reserved by Sahil Patel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle Switch -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <div class="dark-mode-toggle-switch">
+            <div class="dark-mode-toggle-handle">
+                <span class="dark-mode-toggle-icon sun-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </span>
+                <span class="dark-mode-toggle-icon moon-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </button>
+
+    <!-- Scripts -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
