@@ -379,15 +379,41 @@ function initProjectCards() {
     // Project data for modal
     const projectData = {
         1: {
-            title: "Hauntwood Hop - 2D Game (UWP)",
+            title: "Choir & Volunteer Management System",
+            category: "Web Development",
+            description: "Engineered a full-stack .NET MVC web application for managing singers, choirs, and volunteer data. Implemented advanced features including archival system and bulk data upload via Excel integration. Features include volunteer tracking, choir management, archival data system, Excel bulk upload, and role-based access control.",
+            images: [
+                "assets/images/TVLoginPage.png",
+                "assets/images/TVLoginScreen.png",
+                "assets/images/TvEvents.png",
+                "assets/images/TvVolImport.png",
+                "assets/images/TVVolMain.png",
+                "assets/images/TvQRCheckIn.png",
+                "assets/images/TvVolEvent.png",
+                "assets/images/TvQRScanning.png",
+                "assets/images/TvEventAttended.png"
+            ],
+            technologies: ["C#", "Entity Framework", "SQLite", "MVC Design Pattern", "Bootstrap", "ASP.NET"],
+            skills: [
+                "Full-Stack Web Development",
+                "MVC Architecture",
+                "Database Design",
+                "Role-Based Authentication",
+                "Excel Data Import",
+                "User Management Systems"
+            ],
+            link: "https://tomorrowsvoices.azurewebsites.net/"
+        },
+        2: {
+            title: "2D Game (UWP)",
             category: "Desktop Application",
-            description: "Developed an interactive Halloween-themed 2D game with physics engine, collision detection, and dynamic difficulty progression. Implemented OOP architecture, state management, and real-time UI rendering for smooth gameplay. Features include menu navigation, high score tracking, and immersive game mechanics.",
+            description: "Developed an interactive 2D game application featuring physics engine, collision detection, and dynamic difficulty progression. Implemented OOP design patterns, state management, and real-time UI rendering. Applied event-driven programming and optimized algorithms for smooth gameplay.",
             images: [
                 "assets/images/UWPGameMainPage.png",
                 "assets/images/UWPProfil.png",
                 "assets/images/UWPDifTile.png"
             ],
-            technologies: ["C#", "UWP", "XAML", "Event-driven Programming", "Object-Oriented Design"],
+            technologies: ["C#", "UWP", "XAML"],
             skills: [
                 "Object-Oriented Design",
                 "Event-driven Programming",
@@ -398,7 +424,7 @@ function initProjectCards() {
             ],
             link: null
         },
-        2: {
+        3: {
             title: "Business Intelligence Dashboard",
             category: "Data Visualization",
             description: "Created a comprehensive Power BI dashboard for Conteso Retailers, featuring interactive data visualizations including profit analysis by month, product category performance, sales channel breakdowns, and top/bottom selling products. Implemented dynamic filters for year and quarter selection with real-time KPI tracking.",
@@ -415,32 +441,6 @@ function initProjectCards() {
                 "Data Modeling"
             ],
             link: null
-        },
-        3: {
-            title: "Choir & Volunteer Management System",
-            category: "Web Development",
-            description: "Developed a .NET MVC web application for managing Singers, Choirs, and Volunteers for Tomorrows Voices. Implemented features such as an archival system, bulk data upload via Excel, role-based authentication (Admin, Director, Volunteer), and comprehensive user management with a modern, intuitive interface.",
-            images: [
-                "assets/images/TVLoginPage.png",
-                "assets/images/TVLoginScreen.png",
-                "assets/images/TvEvents.png",
-                "assets/images/TvVolImport.png",
-                "assets/images/TVVolMain.png",
-                "assets/images/TvQRCheckIn.png",
-                "assets/images/TvVolEvent.png",
-                "assets/images/TvQRScanning.png",
-                "assets/images/TvEventAttended.png"
-            ],
-            technologies: ["C#", "Entity Framework", "SQLite", "MVC Design Pattern", "Bootstrap", "ASP.NET Core"],
-            skills: [
-                "Full-Stack Web Development",
-                "MVC Architecture",
-                "Database Design",
-                "Role-Based Authentication",
-                "Excel Data Import",
-                "User Management Systems"
-            ],
-            link: "https://tomorrowsvoices.azurewebsites.net/"
         }
     };
     
@@ -794,4 +794,29 @@ function initMobileMenu() {
             }
         });
     });
+}
+
+// ============================================
+// Footer Scroll to Top Button
+// ============================================
+function initFooterScrollToTop() {
+    const scrollToTopBtn = document.getElementById('footerScrollToTop');
+    
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Initialize footer scroll to top on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooterScrollToTop);
+} else {
+    initFooterScrollToTop();
 }

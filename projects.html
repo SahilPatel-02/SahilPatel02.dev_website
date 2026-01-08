@@ -153,17 +153,38 @@
         <section class="projects-stack-section" id="projectsStack">
             <div class="container">
                 <div class="projects-stack-container">
-                    <!-- Project 1 - 2D Game (UWP) -->
+                    <!-- Project 1 - Choir & Volunteer Management System -->
                     <div class="project-stack-card" data-project="1">
+                        <div class="project-stack-content">
+                            <div class="project-stack-image">
+                                <img src="assets/images/TVLoginPage.png" alt="Tomorrows Voices Management System" />
+                            </div>
+                            <div class="project-stack-info">
+                                <span class="project-stack-category">Web Development</span>
+                                <h2 class="project-stack-title">Choir & Volunteer Management System</h2>
+                                <p class="project-stack-description">
+                                    Engineered a full-stack .NET MVC web application for managing singers, choirs, and volunteer data. Implemented advanced features including archival system and bulk data upload via Excel integration.
+                                </p>
+                                <div class="project-stack-tech">
+                                    <span>ASP.NET MVC</span>
+                                    <span>Entity Framework</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - 2D Game (UWP) -->
+                    <div class="project-stack-card" data-project="2">
                         <div class="project-stack-content">
                             <div class="project-stack-image">
                                 <img src="assets/images/UWPGameMainPage.png" alt="Hauntwood Hop - UWP 2D Game" />
                             </div>
                             <div class="project-stack-info">
                                 <span class="project-stack-category">Desktop Application</span>
-                                <h2 class="project-stack-title">Hauntwood Hop - 2D Game (UWP)</h2>
+                                <h2 class="project-stack-title">2D Game (UWP)</h2>
                                 <p class="project-stack-description">
-                                    Developed an interactive Halloween-themed 2D game with physics engine, collision detection, and dynamic difficulty progression.
+                                    Developed an interactive 2D game application featuring physics engine, collision detection, and dynamic difficulty progression.
                                 </p>
                                 <div class="project-stack-tech">
                                     <span>C#</span>
@@ -174,8 +195,8 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 - Power BI Dashboard -->
-                    <div class="project-stack-card" data-project="2">
+                    <!-- Project 3 - Power BI Dashboard -->
+                    <div class="project-stack-card" data-project="3">
                         <div class="project-stack-content">
                             <div class="project-stack-image">
                                 <img src="assets/images/PowerBI.png" alt="Power BI Business Intelligence Dashboard" />
@@ -190,27 +211,6 @@
                                     <span>Power BI</span>
                                     <span>Data Analysis</span>
                                     <span>Dashboard Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 - Choir & Volunteer Management System -->
-                    <div class="project-stack-card" data-project="3">
-                        <div class="project-stack-content">
-                            <div class="project-stack-image">
-                                <img src="assets/images/TVLoginPage.png" alt="Tomorrows Voices Management System" />
-                            </div>
-                            <div class="project-stack-info">
-                                <span class="project-stack-category">Web Development</span>
-                                <h2 class="project-stack-title">Choir & Volunteer Management System</h2>
-                                <p class="project-stack-description">
-                                    Developed a .NET MVC web application for managing Singers, Choirs, and Volunteers with role-based authentication and comprehensive user management.
-                                </p>
-                                <div class="project-stack-tech">
-                                    <span>ASP.NET Core</span>
-                                    <span>MVC</span>
-                                    <span>Entity Framework</span>
                                 </div>
                             </div>
                         </div>
@@ -247,15 +247,24 @@
         <div class="container">
             <!-- Top Section: Three Columns -->
             <div class="footer-top">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-md-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-3 mb-md-0">
                         <div class="footer-column">
                             <span class="footer-label">Email :</span>
                             <a href="mailto:sahil02.jp@gmail.com" class="footer-link">sahil02.jp@gmail.com</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="footer-column">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-3 mb-md-0">
+                        <div class="footer-column text-center">
+                            <button class="scroll-to-top-btn" id="footerScrollToTop" aria-label="Scroll to top">
+                                <svg class="scroll-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 15l-6-6-6 6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="footer-column text-end">
                             <span class="footer-label">Social :</span>
                             <div class="social-links-icons">
                                 <a href="https://github.com/SahilPatel-02" class="social-icon-link" target="_blank" aria-label="GitHub" title="GitHub">
@@ -281,6 +290,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Bottom Section: Copyright -->
             <div class="footer-bottom">
                 <div class="row">
