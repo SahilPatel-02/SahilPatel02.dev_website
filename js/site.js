@@ -804,13 +804,13 @@ function initMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenuClose = document.getElementById('mobileMenuClose');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileMenuContent = document.getElementById('mobileMenuContent');
+    const mobileNavbarContainer = document.getElementById('mobileNavbarContainer');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link, .mobile-menu-contact-btn');
     
     function openMobileMenu() {
-        if (mobileMenuContent) {
-            mobileMenuContent.classList.add('active');
-        }
+        if (!mobileNavbarContainer) return;
+        
+        mobileNavbarContainer.classList.add('active');
         if (mobileMenuOverlay) {
             mobileMenuOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -821,9 +821,9 @@ function initMobileMenu() {
     }
     
     function closeMobileMenu() {
-        if (mobileMenuContent) {
-            mobileMenuContent.classList.remove('active');
-        }
+        if (!mobileNavbarContainer) return;
+        
+        mobileNavbarContainer.classList.remove('active');
         if (mobileMenuOverlay) {
             mobileMenuOverlay.classList.remove('active');
             document.body.style.overflow = '';
@@ -833,12 +833,12 @@ function initMobileMenu() {
         }
     }
     
-    // Open menu
+    // Open menu on hamburger button click
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', openMobileMenu);
     }
     
-    // Close menu
+    // Close menu on X button click
     if (mobileMenuClose) {
         mobileMenuClose.addEventListener('click', closeMobileMenu);
     }
@@ -862,7 +862,7 @@ function initMobileMenu() {
     
     // Close menu on Escape key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenuContent && mobileMenuContent.classList.contains('active')) {
+        if (e.key === 'Escape' && mobileNavbarContainer && mobileNavbarContainer.classList.contains('active')) {
             closeMobileMenu();
         }
     });

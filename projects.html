@@ -72,30 +72,31 @@
     <!-- Mobile Navigation Bar (visible only on mobile) -->
     <nav class="mobile-navbar" id="mobileNavbar">
         <div class="mobile-navbar-wrapper">
-            <div class="mobile-navbar-container">
-                <!-- Profile Picture -->
-                <div class="mobile-navbar-profile">
-                    <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-navbar-avatar" />
-                </div>
-                
-                <!-- Available for Work Indicator -->
-                <div class="mobile-navbar-available">
-                    <span class="mobile-available-text">Available for work</span>
-                    <div class="mobile-available-dot">
-                        <div class="pulse-ring"></div>
-                        <div class="pulse-dot"></div>
+            <div class="mobile-navbar-container" id="mobileNavbarContainer">
+                <!-- Default State: Collapsed Navbar -->
+                <div class="mobile-navbar-collapsed">
+                    <!-- Profile Picture -->
+                    <div class="mobile-navbar-profile">
+                        <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-navbar-avatar" />
                     </div>
+                    
+                    <!-- Available for Work Indicator -->
+                    <div class="mobile-navbar-available">
+                        <span class="mobile-available-text">Available for work</span>
+                        <div class="mobile-available-dot">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hamburger Menu Button -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
                 </div>
                 
-                <!-- Hamburger Menu Button -->
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu Content (expands downward) -->
-            <div class="mobile-menu-content" id="mobileMenuContent">
+                <!-- Expanded State: Menu Header with Profile and Close Button -->
                 <div class="mobile-menu-header">
                     <div class="mobile-menu-profile">
                         <img src="assets/images/MainImage.png" alt="Sahil Patel" class="mobile-menu-avatar" />
@@ -106,25 +107,28 @@
                     </button>
                 </div>
                 
-                <nav class="mobile-menu-nav">
-                    <ul class="mobile-menu-list">
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu-link" href="index.html">Home</a>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu-link" href="index.html#about-section">About</a>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu-link" href="projects.html">Projects</a>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu-link" href="resume.html">Resume</a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <div class="mobile-menu-footer">
-                    <a class="mobile-menu-contact-btn" href="index.html#lets-work-together">Contact</a>
+                <!-- Mobile Menu Content (expands within container) -->
+                <div class="mobile-menu-content" id="mobileMenuContent">
+                    <nav class="mobile-menu-nav">
+                        <ul class="mobile-menu-list">
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="index.html">Home</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="index.html#about-section">About</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="projects.html">Projects</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="resume.html">Resume</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="mobile-menu-footer">
+                        <a class="mobile-menu-contact-btn" href="index.html#lets-work-together">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
