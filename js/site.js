@@ -185,42 +185,150 @@ function initNavbarScroll() {
 }
 
 // ============================================
-// Contact Form Handler (Basic Example)
+// Contact Form Handler - Web3Forms Integration
 // ============================================
-// This is a basic example - you'll need to integrate with your backend
+// Replace 'YOUR_WEB3FORMS_ACCESS_KEY' with your actual access key from web3forms.com
+const WEB3FORMS_ACCESS_KEY = '34dbdeda-1832-461b-80dd-7ae6ed618241';
+
 function handleContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form data - check for CTA form IDs first, then fallback to regular form IDs
+            // Get form elements
             const nameField = document.getElementById('cta-name') || document.getElementById('name');
             const emailField = document.getElementById('cta-email') || document.getElementById('email');
             const serviceField = document.getElementById('cta-service');
             const messageField = document.getElementById('cta-message') || document.getElementById('message');
             const formMessage = document.getElementById('cta-form-message') || document.getElementById('formMessage');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             
-            const formData = {
-                name: nameField ? nameField.value : '',
-                email: emailField ? emailField.value : '',
-                service: serviceField ? serviceField.value : '',
-                message: messageField ? messageField.value : ''
-            };
-            
-            // Log form data (replace with actual API call)
-            console.log('Form submitted:', formData);
-            
-            // Show success message (replace with actual backend integration)
-            if (formMessage) {
-                formMessage.style.display = 'block';
-                formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-                formMessage.className = 'form-message mt-3 alert alert-success';
+            // Validate access key
+            if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.textContent = 'Error: Please configure your Web3Forms access key in js/site.js';
+                    formMessage.className = 'form-message mt-3 alert alert-danger';
+                }
+                console.error('Web3Forms access key not configured. Please add your access key to js/site.js');
+                return;
             }
             
-            // Reset form
-            contactForm.reset();
+            // Get form data
+            const name = nameField ? nameField.value.trim() : '';
+            const email = emailField ? emailField.value.trim() : '';
+            const service = serviceField ? serviceField.value : '';
+            const message = messageField ? messageField.value.trim() : '';
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.textContent = 'Please fill in all required fields.';
+                    formMessage.className = 'form-message mt-3 alert alert-warning';
+                }
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.textContent = 'Please enter a valid email address.';
+                    formMessage.className = 'form-message mt-3 alert alert-warning';
+                }
+                return;
+            }
+            
+            // Disable submit button and show loading state
+            const originalButtonText = submitButton ? submitButton.textContent : '';
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                submitButton.style.opacity = '0.7';
+            }
+            
+            // Hide previous messages
+            if (formMessage) {
+                formMessage.style.display = 'none';
+            }
+            
+            // Prepare data for Web3Forms
+            const subject = service 
+                ? `Contact Form: ${service.charAt(0).toUpperCase() + service.slice(1).replace('-', ' ')}`
+                : 'Contact Form Submission';
+            
+            const fullMessage = service 
+                ? `Service: ${service.charAt(0).toUpperCase() + service.slice(1).replace('-', ' ')}\n\nMessage:\n${message}`
+                : message;
+            
+            const web3formsData = {
+                access_key: WEB3FORMS_ACCESS_KEY,
+                name: name,
+                email: email,
+                subject: subject,
+                message: fullMessage,
+                from_name: name,
+                // Optional: Add honeypot field for spam protection
+                _honeypot: '',
+                // Optional: Add redirect URL (leave empty to use default)
+                _redirect: '',
+                // Optional: Add custom reply-to
+                _replyto: email
+            };
+            
+            try {
+                // Send data to Web3Forms API
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(web3formsData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Success - show success message
+                    if (formMessage) {
+                        formMessage.style.display = 'block';
+                        formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                        formMessage.className = 'form-message mt-3 alert alert-success';
+                    }
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to message if needed
+                    if (formMessage) {
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                } else {
+                    // API returned an error
+                    throw new Error(result.message || 'Failed to send message. Please try again.');
+                }
+            } catch (error) {
+                // Network error or other exception
+                console.error('Form submission error:', error);
+                
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.textContent = 'Sorry, there was an error sending your message. Please try again later or contact me directly at sahil02.jp@gmail.com';
+                    formMessage.className = 'form-message mt-3 alert alert-danger';
+                }
+            } finally {
+                // Re-enable submit button
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    submitButton.style.opacity = '1';
+                }
+            }
         });
     }
 }
