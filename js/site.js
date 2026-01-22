@@ -510,7 +510,7 @@ function initProjectCards() {
                 "Excel Data Import",
                 "User Management Systems"
             ],
-            link: "https://tomorrowsvoices.azurewebsites.net/"
+            link: "https://tomorrowsvoicesbysemicolon.azurewebsites.net"
         },
         2: {
             title: "2D Game (UWP)",
